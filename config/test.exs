@@ -3,7 +3,7 @@ import Config
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
 config :physproj, PhysprojWeb.Endpoint,
-  http: [ip: {127, 0, 0, 1}, port: 4002],
+  http: [ip: {0, 0, 0, 0}, port: 4002],
   secret_key_base: "ISeTnIyrA8AtSGjIxOiq86gMQKiHjmaZVmxY/vz1AJfmI2L3kHuUI3O+7ZRqbPGj",
   server: false
 

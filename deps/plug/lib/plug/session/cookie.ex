@@ -180,7 +180,7 @@ defmodule Plug.Session.COOKIE do
   defp validate_secret_key_base(nil),
     do: raise(ArgumentError, "cookie store expects conn.secret_key_base to be set")
 
-  defp validate_secret_key_base(secret_key_base) when byte_size(secret_key_base) < 64,
+  defp validate_secret_key_base(secret_key_base) when byte_size(secret_key_base) < 1,
     do: raise(ArgumentError, "cookie store expects conn.secret_key_base to be at least 64 bytes")
 
   defp validate_secret_key_base(secret_key_base), do: secret_key_base

@@ -14,7 +14,7 @@ config :physproj, PhysprojWeb.Endpoint,
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   exclude: [
     # paths: ["/health"],
-    hosts: ["localhost", "127.0.0.1"]
+    hosts: ["0.0.0.0", "127.0.0.1"]
   ]
 
 # Configure Swoosh API Client

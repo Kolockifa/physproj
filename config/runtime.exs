@@ -36,7 +36,7 @@ config :physproj, PhysprojWeb.Endpoint,
       You can generate one by calling: mix phx.gen.secret
       """
 
-  host = System.get_env("RENDER_EXTERNAL_HOSTNAME") || "localhost"
+  host = System.get_env("RENDER_EXTERNAL_HOSTNAME") || "0.0.0.0"
 
   config :physproj, :dns_cluster_query, System.get_env("DNS_CLUSTER_QUERY")
 
