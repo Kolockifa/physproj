@@ -10,6 +10,9 @@ import Config
 config :physproj,
   generators: [timestamp_type: :utc_datetime]
 
+config :physproj, PhysprojWeb.Endpoint,
+  secret_key_base: "o6lk6IqYCvNrOfcrOHdk7Q+MK5lUutmhTtdWLm8/YF8FEoem0XttuDWc6MgeBmaT"
+
 # Configure the endpoint
 config :physproj, PhysprojWeb.Endpoint,
   url: [host: "localhost"],
