@@ -6,7 +6,9 @@ import Config
 # which you should run after static files are built and
 # before starting your production server.
 config :physproj, PhysprojWeb.Endpoint, cache_static_manifest: "priv/static/cache_manifest.json"
-
+secret_key_base =
+    System.get_env("SECRET_KEY_BASE")
+host = System.get_env("RENDER_EXTERNAL_HOSTNAME") || "0.0.0.0"
 # Force using SSL in production. This also sets the "strict-security-transport" header,
 # known as HSTS. If you have a health check endpoint, you may want to exclude it below.
 # Note `:force_ssl` is required to be set at compile-time.
