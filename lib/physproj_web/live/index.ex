@@ -6,9 +6,10 @@ defmodule PhysprojWeb.QuantityLive.Index do
     ~H"""
     <Layouts.app flash={@flash}>
       <.header>
-        <.form for={@searchform} id="search-form" phx-submit="search">
-          <p><.input field={@searchform[:search]} name="search" type="text" label="Поиск величин" value=""/>
-          <.button phx-disable-with="Ищем..." variant="primary">Найти</.button></p>
+        <div class="flex place-content-center mb-10"><p>Поиск величин</p></div>
+        <.form for={@searchform} id="search-form" phx-submit="search" class="flex justify-between">
+          <.input field={@searchform[:search]} name="search" class="input lg:w-140 md:w-100 w-80 rounded-xl focus:outline-black-500 focus:outline-offset-2 focus:outline-2 flex-auto" type="text" placeholder="Название величины" value=""/>
+          <.button phx-disable-with="Ищем..." variant="primary">Найти</.button>
         </.form>
       </.header>
 
