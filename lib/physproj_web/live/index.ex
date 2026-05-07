@@ -39,7 +39,7 @@ defmodule PhysprojWeb.QuantityLive.Index do
   def handle_event("search", %{"search" => search}, socket) do
     filtr = case search do
       "" -> list_quantities()
-      _ -> Enum.filter(list_quantities(), fn quantity -> String.jaro_distance(search, quantity.name) > 0.6 end)
+      _ -> Enum.filter(list_quantities(), fn quantity -> String.jaro_distance(search, quantity.name) > 0.75 end)
     end
     {:noreply, stream(socket, :quantities, filtr, reset: true)}
   end
