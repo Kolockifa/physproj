@@ -16,7 +16,7 @@ defmodule PhysprojWeb.QuantityLive.Index do
       <.table
         id="quantities"
         rows={@streams.quantities}
-        row_click={fn {_id, quantity} -> JS.navigate(~p"/quantities/#{quantity}") end}
+        row_click={fn {_id, quantity} -> JS.patch(~p"/quantities/#{quantity}") end}
       >
         <:col :let={{_id, quantity}} label="Название">{quantity.name}</:col>
         <:col :let={{_id, quantity}} label="Обозначение">{quantity.symbol}</:col>
