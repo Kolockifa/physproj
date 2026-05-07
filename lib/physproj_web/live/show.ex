@@ -9,7 +9,7 @@ defmodule PhysprojWeb.QuantityLive.Show do
         {@quantity.name}
         <:subtitle>{@quantity.section}</:subtitle>
         <:actions>
-          <.button navigate={~p"/"}>
+          <.button patch={~p"/"}>
             <.icon name="hero-arrow-left" /> Вернуться к каталогу
           </.button>
         </:actions>
