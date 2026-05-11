@@ -9,8 +9,8 @@ defmodule PhysprojWeb.QuantityLive.Show do
         {@quantity.name}
         <:subtitle>{@quantity.section}</:subtitle>
         <:actions>
-          <.button navigate={~p"/"}>
-            <.icon name="hero-arrow-left" /> Вернуться к каталогу
+          <.button patch={~p"/"}>
+            <.icon name="hero-arrow-left" /> Назад
           </.button>
         </:actions>
       </.header>
@@ -30,7 +30,7 @@ defmodule PhysprojWeb.QuantityLive.Show do
   def mount(%{"id" => id}, _session, socket) do
     {:ok,
      socket
-     |> assign(:page_title, "Show Quantity")
+     |> assign(:page_title, "Просмотр величины")
      |> assign(:quantity, Quantities.get(id))}
   end
 end
